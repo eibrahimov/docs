@@ -1,0 +1,344 @@
+---
+title: 'Enhanced Error Handling'
+description: 'Enhanced Error Handling in MigrationPro Shopify Remix App'
+---
+
+Welcome to the developer documentation for the enhanced error handling strategy in the MigrationPro Shopify Remix application. This guide will help you understand the new error handling approach and how to implement it when creating new routes and React components.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Summary of Changes](#summary-of-changes)
+  - [Custom Error Classes](#custom-error-classes)
+  - [Enhanced ApiClient](#enhanced-apiclient)
+  - [Using tiny-invariant](#using-tiny-invariant)
+- [How to Use This Approach](#how-to-use-this-approach)
+  - [When to Use invariant](#when-to-use-invariant)
+  - [Handling Data Flow with Errors and Action Data](#handling-data-flow-with-errors-and-action-data)
+  - [Usage in Actions, Loaders, and Forms](#usage-in-actions-loaders-and-forms)
+- [Creating New Routes and Components](#creating-new-routes-and-components)
+  - [Step-by-Step Workflow](#step-by-step-workflow)
+- [Best Practices](#best-practices)
+- [Conclusion](#conclusion)
+
+---
+
+## Introduction
+
+To improve the reliability and user experience of our Remix application, we've implemented a structured error handling strategy. This new approach ensures consistent error handling across the app, making it easier for developers of all levels to maintain and extend the application.
+
+Key components of this strategy include:
+
+- **Custom Error Classes**: Specific error types for better control.
+- **Enhanced ApiClient**: Integration with `tiny-invariant` and improved error transformation.
+- **Use of `tiny-invariant`**: Asserting critical conditions throughout the app.
+- **Improved Loaders and Actions**: Systematic error handling and data validation.
+- **Customized ErrorBoundary Components**: Displaying meaningful error messages.
+- **Optimized Data Flow**: Handling errors and action data in the Remix way.
+
+---
+
+## Summary of Changes
+
+### Custom Error Classes
+
+We've created custom error classes to represent different error scenarios, making error handling more granular and manageable.
+
+```javascript
+// app/utils/errors.js
+
+export class ApiError extends Error {
+  constructor(message, statusCode, data) {
+    super(message);
+    this.name = 'ApiError';
+    this.statusCode = statusCode;
+    this.data = data;
+  }
+}
+
+export class NetworkError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'NetworkError';
+  }
+}
+
+export class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'ValidationError';
+  }
+}
+```
+
+**Usage:**
+
+- **ApiError**: Thrown when the API responds with an error status code.
+- **NetworkError**: Thrown when a network issue occurs (e.g., no response).
+- **ValidationError**: Thrown when data validation fails.
+
+### Enhanced ApiClient
+
+Our `ApiClient` now uses `tiny-invariant` to assert critical conditions and transforms errors into our custom error classes.
+
+```javascript
+// app/utils/ApiClient.js
+
+import axios from 'axios';
+import invariant from 'tiny-invariant';
+import { ApiError, NetworkError, ValidationError } from './errors';
+
+class ApiClient {
+  async request(config) {
+    try {
+      // Assert that necessary config properties are present
+      invariant(config.url, 'Request URL is required');
+      invariant(config.method, 'Request method is required');
+
+      const response = await axios(config);
+      return response.data;
+    } catch (error) {
+      if (error.response) {
+        throw new ApiError(
+          error.response.data?.message || 'API Error',
+          error.response.status,
+          error.response.data
+        );
+      } else if (error.request) {
+        throw new NetworkError('Network error, please try again later.');
+      } else if (error.message.includes('Invariant violation')) {
+        throw new ValidationError(error.message.replace('Invariant violation: ', ''));
+      } else {
+        throw new Error('An unexpected error occurred.');
+      }
+    }
+  }
+}
+
+export default new ApiClient();
+```
+
+### Using tiny-invariant
+
+We are using `tiny-invariant` to assert critical conditions throughout the application. If a condition fails, it throws an error, preventing the application from proceeding with invalid data.
+
+**Example:**
+
+```javascript
+import invariant from 'tiny-invariant';
+
+invariant(params.id, 'ID parameter is required');
+```
+
+---
+
+## How to Use This Approach
+
+### When to Use `invariant`
+
+**Use `invariant` to assert critical conditions:**
+
+- **In Loaders**: Check that required URL parameters are present.
+- **In Actions**: Validate form data before processing.
+- **In API Modules**: Ensure required data is present before making API calls.
+
+### Handling Data Flow with Errors and Action Data
+
+**In Actions:**
+
+- **Catch Validation Errors**: Return them using `json()` with a `400` status code.
+- **Other Errors**: Re-throw to be caught by the `ErrorBoundary`.
+
+**In Components:**
+
+- **Use `useActionData()`**: Access errors returned from the action.
+- **Display Errors**: Show validation messages next to form fields.
+
+### Usage in Actions, Loaders, and Forms
+
+#### Actions
+
+```javascript
+export async function action({ request }) {
+  const formData = await request.formData();
+  const values = Object.fromEntries(formData);
+
+  invariant(values.name, 'Name is required');
+
+  try {
+    await MigrationAPI.updateMigration(values);
+    return redirect('/success');
+  } catch (error) {
+    if (error instanceof ValidationError) {
+      return json({ errors: { message: error.message } }, { status: 400 });
+    } else {
+      throw error;
+    }
+  }
+}
+```
+
+#### Loaders
+
+```javascript
+export async function loader({ params }) {
+  invariant(params.id, 'ID parameter is required');
+
+  try {
+    const data = await MigrationAPI.getMigration(params.id);
+    return json({ data });
+  } catch (error) {
+    throw error;
+  }
+}
+```
+
+#### Forms
+
+```jsx
+import { useActionData, Form } from '@remix-run/react';
+
+export default function MigrationForm() {
+  const actionData = useActionData();
+  const errors = actionData?.errors || {};
+
+  return (
+    <Form method="post">
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input type="text" name="name" id="name" />
+        {errors.field === 'name' && <p className="error">{errors.message}</p>}
+      </div>
+      {/* Other form fields */}
+      <button type="submit">Submit</button>
+    </Form>
+  );
+}
+```
+
+---
+
+## Creating New Routes and Components
+
+### Step-by-Step Workflow
+
+1. **Create the Route File**: For example, `app/routes/newRoute.jsx`.
+
+2. **Implement the Loader**:
+
+   ```javascript
+   export async function loader({ params }) {
+     invariant(params.id, 'ID is required');
+
+     try {
+       const data = await SomeAPI.getData(params.id);
+       return json({ data });
+     } catch (error) {
+       throw error;
+     }
+   }
+   ```
+
+3. **Implement the Action**:
+
+   ```javascript
+   export async function action({ request }) {
+     const formData = await request.formData();
+     const values = Object.fromEntries(formData);
+
+     invariant(values.fieldName, 'Field is required');
+
+     try {
+       await SomeAPI.updateData(values);
+       return redirect('/success');
+     } catch (error) {
+       if (error instanceof ValidationError) {
+         return json({ errors: { message: error.message } }, { status: 400 });
+       } else {
+         throw error;
+       }
+     }
+   }
+   ```
+
+4. **Create the Component**:
+
+   ```jsx
+   export default function NewRoute() {
+     const actionData = useActionData();
+     const errors = actionData?.errors || {};
+
+     return (
+       <Form method="post">
+         <div>
+           <label htmlFor="fieldName">Field:</label>
+           <input type="text" name="fieldName" id="fieldName" />
+           {errors.field === 'fieldName' && <p className="error">{errors.message}</p>}
+         </div>
+         <button type="submit">Submit</button>
+       </Form>
+     );
+   }
+   ```
+
+5. **Implement the ErrorBoundary**:
+
+   ```jsx
+   export function ErrorBoundary({ error }) {
+     if (error instanceof ValidationError) {
+       return (
+         <div className="error">
+           <h1>Validation Error</h1>
+           <p>{error.message}</p>
+         </div>
+       );
+     } else if (error instanceof ApiError) {
+       return (
+         <div className="error">
+           <h1>API Error</h1>
+           <p>{error.message}</p>
+         </div>
+       );
+     } else {
+       return (
+         <div className="error">
+           <h1>Unexpected Error</h1>
+           <p>{error.message}</p>
+         </div>
+       );
+     }
+   }
+   ```
+
+---
+
+## Best Practices
+
+- **Consistent Error Handling**: Always use custom error classes to throw errors.
+- **Meaningful Error Messages**: Provide clear messages that help users understand what went wrong.
+- **Avoid Exposing Sensitive Information**: Don't include internal error details in messages shown to users.
+- **Logging**: Implement logging for debugging purposes.
+- **Testing**: Write tests to cover various error scenarios.
+
+---
+
+## Conclusion
+
+By adopting this structured error handling approach, we ensure:
+
+- **Consistency**: Error handling is standardized across the application.
+- **Maintainability**: Easier to understand and manage error scenarios.
+- **Improved User Experience**: Users receive clear and helpful feedback.
+- **Simplified Debugging**: Custom error classes and logging make troubleshooting easier.
+
+Remember:
+
+- **Use `invariant`** to assert critical conditions.
+- **Handle errors appropriately** in loaders and actions.
+- **Provide meaningful feedback** to users through `ErrorBoundary` components and action data.
+
+---
+
+If you have any questions or need further clarification on implementing these changes, feel free to reach out to the team leads or consult the additional resources provided in the project repository.
+
+Happy coding!
