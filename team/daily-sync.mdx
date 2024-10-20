@@ -1,0 +1,554 @@
+---
+title: 'Daily Sync Guidance'
+description: 'Welcome to the Daily Sync Guidance! This document will help you understand how to effectively answer our daily sync questions. Clear and detailed answers will improve team collaboration, help us solve problems faster, and keep our projects on track.'
+---
+
+## Table of Contents
+
+- [For Backend Developers](#for-backend-developers)
+  - [Question 1](#question-1)
+  - [Question 2](#question-2)
+  - [Question 3](#question-3)
+  - [Question 4](#question-4)
+  - [Question 5](#question-5)
+  - [Question 6](#question-6)
+  - [Question 7](#question-7)
+  - [Question 8](#question-8)
+  - [Question 9](#question-9)
+- [For Technical Support](#for-technical-support)
+  - [Question 1](#question-1-1)
+  - [Question 2](#question-2-1)
+  - [Question 3](#question-3-1)
+  - [Question 4](#question-4-1)
+  - [Question 5](#question-5-1)
+  - [Question 6](#question-6-1)
+  - [Question 7](#question-7-1)
+  - [Question 8](#question-8-1)
+- [General Tips](#general-tips)
+
+---
+
+## For Backend Developers
+
+### Question 1
+
+**Which specific components of the ETL flow (e.g., connectors, importers, entity models, exporters) did you work on since your last update? Please describe your contributions (e.g., new features, bug fixes, optimizations).**
+
+#### Why This Question Is Important
+
+- **Keeps the team informed** about which parts of the project are being worked on.
+- **Helps coordinate efforts** and avoid duplicate work.
+- **Identifies areas of progress** and highlights your contributions.
+
+#### How to Answer
+
+- **Be specific** about the components you worked on.
+- **Describe your contributions** clearly.
+- **Mention any issues resolved** or improvements made.
+
+#### Example Answer
+
+> **Worked On:** I worked on the **Shopify connector** and the **Exporter** module.
+>
+> **Contributions:**
+>
+> - Fixed a bug in the Shopify connector where product variants were not importing correctly.
+> - Optimized the Exporter to reduce data export time by 20%.
+> - Added logging to the importer for better error tracking.
+
+---
+
+### Question 2
+
+**Did you encounter any issues or bugs in the MigrationPro API or Migrator repositories? How did you address them, or do you need assistance?**
+
+#### Why This Question Is Important
+
+- **Identifies obstacles** that may affect project timelines.
+- **Opens opportunities for team support** to resolve issues quickly.
+- **Improves overall code quality** by addressing bugs promptly.
+
+#### How to Answer
+
+- **Describe any issues or bugs** you found.
+- **Explain how you addressed them** or if you need help.
+- **Be honest** if you're stuck; the team is here to support you.
+
+#### Example Answer
+
+> **Issues Encountered:**
+>
+> - Found a data mapping issue in the **Entity models** where customer addresses weren't saving correctly.
+>
+> **Actions Taken:**
+>
+> - Investigated the serialization process and fixed the mapping logic.
+>
+> **Assistance Needed:**
+>
+> - Would appreciate a code review to ensure the fix doesn't affect other modules.
+
+---
+
+### Question 3
+
+**Have you made any changes or improvements to the Django admin interface? If so, please detail them.**
+
+#### Why This Question Is Important
+
+- **Keeps the team updated** on changes that might affect their workflow.
+- **Improves usability** for everyone using the admin interface.
+- **Highlights enhancements** that can increase productivity.
+
+#### How to Answer
+
+- **Mention any changes** you made to the admin interface.
+- **Explain the purpose** of these changes.
+- **Describe how it benefits the team**.
+
+#### Example Answer
+
+> **Changes Made:**
+>
+> - Added new filters in the Django admin to sort migration tasks by status and date.
+>
+> **Purpose:**
+>
+> - To make it easier for the support team to monitor ongoing migrations.
+>
+> **Benefits:**
+>
+> - Streamlines task management and improves efficiency.
+
+---
+
+### Question 4
+
+**Are there any problems with specific shopping cart connectors (e.g., Shopify, Magento) you identified during migrations? How are you handling them?**
+
+#### Why This Question Is Important
+
+- **Detects issues** that could affect multiple customers.
+- **Allows for timely fixes**, improving customer satisfaction.
+- **Ensures data integrity** during migrations.
+
+#### How to Answer
+
+- **Identify the connector** with issues.
+- **Describe the problem** in detail.
+- **Explain your plan** to fix it or if you need help.
+
+#### Example Answer
+
+> **Connector Issue:**
+>
+> - The **Magento importer** fails when processing large product catalogs due to memory errors.
+>
+> **Handling:**
+>
+> - Started optimizing the importer to handle data in smaller batches.
+> - Monitoring memory usage to identify bottlenecks.
+>
+> **Assistance Needed:**
+>
+> - May need advice on efficient data processing techniques in Django.
+
+---
+
+### Question 5
+
+**What are your main objectives for today regarding the ETL components, and how do they align with our current project goals?**
+
+#### Why This Question Is Important
+
+- **Sets clear priorities** for your workday.
+- **Ensures alignment** with project timelines and goals.
+- **Communicates your focus** to the team.
+
+#### How to Answer
+
+- **List your key tasks** for the day.
+- **Explain how they contribute** to the project goals.
+- **Be specific** to help others understand your priorities.
+
+#### Example Answer
+
+> **Today's Objectives:**
+>
+> - Complete optimization of the Magento importer to handle large datasets efficiently.
+> - Begin implementing error handling improvements in the Shopify exporter.
+>
+> **Alignment with Project Goals:**
+>
+> - These tasks will enhance our platform's ability to handle larger clients, which is a key objective this quarter.
+
+---
+
+### Question 6
+
+**Do you foresee any challenges or blockers in your tasks today? What support do you need to overcome them?**
+
+#### Why This Question Is Important
+
+- **Anticipates potential delays**, allowing the team to adjust plans.
+- **Encourages proactive problem-solving**.
+- **Facilitates team support** to overcome challenges.
+
+#### How to Answer
+
+- **Identify any expected challenges**.
+- **Explain how they might affect your work**.
+- **Request specific support** if needed.
+
+#### Example Answer
+
+> **Challenges Foreseen:**
+>
+> - Need to optimize memory usage in the Magento importer, which is complex.
+>
+> **Support Needed:**
+>
+> - Would like to pair program with someone experienced in memory optimization in Python.
+
+---
+
+### Question 7
+
+**Have you received any reports from the support team about migration errors or data issues that require investigation?**
+
+#### Why This Question Is Important
+
+- **Connects development with customer issues**.
+- **Prioritizes bug fixes** that impact users.
+- **Improves customer satisfaction** by addressing problems quickly.
+
+#### How to Answer
+
+- **Mention any reports received**.
+- **Describe the issue** and its impact.
+- **Outline your plan** to address it.
+
+#### Example Answer
+
+> **Reports Received:**
+>
+> - Support reported that orders are not migrating correctly from WooCommerce.
+>
+> **Issue Description:**
+>
+> - Orders are missing line items after migration.
+>
+> **Plan to Address:**
+>
+> - Will investigate the WooCommerce importer module today to identify the cause.
+
+---
+
+### Question 8
+
+**Are there any pending pull requests or code reviews you need feedback on?**
+
+#### Why This Question Is Important
+
+- **Ensures code changes are reviewed** and integrated promptly.
+- **Maintains code quality** through peer reviews.
+- **Keeps the development process moving smoothly**.
+
+#### How to Answer
+
+- **List any pending pull requests**.
+- **Mention who you need feedback from**, if applicable.
+- **Highlight any urgent merges** needed.
+
+#### Example Answer
+
+> **Pending Pull Requests:**
+>
+> - PR #42: Optimization of the Exporter module.
+> - PR #43: Fix for customer address mapping issue.
+>
+> **Feedback Needed From:**
+>
+> - Reviewers with experience in data serialization.
+>
+> **Urgency:**
+>
+> - These need to be merged before the end of the week to meet our release deadline.
+
+---
+
+### Question 9
+
+**Do you have suggestions for improvements or optimizations in our migration processes or codebase?**
+
+#### Why This Question Is Important
+
+- **Encourages continuous improvement**.
+- **Harnesses team creativity** to enhance our products.
+- **Identifies potential efficiencies** and innovations.
+
+#### How to Answer
+
+- **Share any ideas** you have.
+- **Explain the potential benefits**.
+- **Offer to take action** if appropriate.
+
+#### Example Answer
+
+> **Suggestions:**
+>
+> - Implement caching in the importer modules to reduce API calls and improve speed.
+>
+> **Benefits:**
+>
+> - This could decrease migration times by up to 30%.
+>
+> **Willingness to Act:**
+>
+> - Happy to start working on a prototype if the team agrees.
+
+---
+
+## For Technical Support
+
+### Question 1
+
+**What migration errors or issues have customers reported since your last update? Please provide specifics, including platforms involved and error messages.**
+
+#### Why This Question Is Important
+
+- **Informs developers of real-world issues** affecting customers.
+- **Helps prioritize bug fixes** and improvements.
+- **Enhances customer satisfaction** by addressing problems quickly.
+
+#### How to Answer
+
+- **List the issues reported**.
+- **Include details** like platforms and error messages.
+- **Be specific** to help developers understand the problem.
+
+#### Example Answer
+
+> **Customer Issues:**
+>
+> - Three customers reported errors when migrating from **Shopify to Shopify Plus**. Error message: "Order data migration failed at step 3."
+> - Two customers migrating from **PrestaShop** experienced missing product images after migration.
+
+---
+
+### Question 2
+
+**Have any migrations resulted in incorrect or incomplete data? Please detail the discrepancies and affected entities (e.g., products, orders).**
+
+#### Why This Question Is Important
+
+- **Highlights data integrity issues**.
+- **Allows developers to fix critical errors** that affect customer businesses.
+- **Maintains trust** in our migration tool.
+
+#### How to Answer
+
+- **Describe the incorrect or incomplete data**.
+- **Specify the entities affected**.
+- **Provide any patterns noticed**.
+
+#### Example Answer
+
+> **Data Discrepancies:**
+>
+> - Customers migrating from **WooCommerce** are missing order line items.
+> - Product descriptions from **Magento** migrations are truncated after 255 characters.
+
+---
+
+### Question 3
+
+**What troubleshooting steps have you taken to resolve these issues? Do you require assistance from the development team?**
+
+#### Why This Question Is Important
+
+- **Shows proactive efforts** to solve problems.
+- **Indicates when escalation is needed**.
+- **Facilitates collaboration** between support and development.
+
+#### How to Answer
+
+- **List the steps you've taken**.
+- **State whether the issue is resolved**.
+- **Ask for help** if needed.
+
+#### Example Answer
+
+> **Troubleshooting Steps:**
+>
+> - Guided customers through re-authenticating their API connections.
+> - Attempted data re-migration after clearing caches.
+>
+> **Outcome:**
+>
+> - Issues persist.
+>
+> **Assistance Needed:**
+>
+> - Need the development team to investigate the root cause.
+
+---
+
+### Question 4
+
+**Are there any patterns or recurring issues across multiple customers that suggest systemic problems?**
+
+#### Why This Question Is Important
+
+- **Identifies widespread issues** affecting multiple users.
+- **Helps prioritize fixes** that will benefit many customers.
+- **Improves the overall quality** of our service.
+
+#### How to Answer
+
+- **Note any recurring problems**.
+- **Provide details** on frequency and impact.
+- **Suggest possible causes**, if any.
+
+#### Example Answer
+
+> **Recurring Issues:**
+>
+> - Multiple customers report timeouts during large data migrations from **Magento**.
+>
+> **Frequency:**
+>
+> - Five reports in the last two days.
+>
+> **Possible Cause:**
+>
+> - Might be related to server performance under heavy loads.
+
+---
+
+### Question 5
+
+**What are your priorities today in assisting customers with migration issues?**
+
+#### Why This Question Is Important
+
+- **Communicates your focus** for the day.
+- **Aligns support efforts** with team goals.
+- **Ensures critical issues are addressed** promptly.
+
+#### How to Answer
+
+- **List your main tasks** for the day.
+- **Highlight any urgent issues**.
+- **Mention any follow-ups** required.
+
+#### Example Answer
+
+> **Today's Priorities:**
+>
+> - Assist customers experiencing errors migrating from Shopify to Shopify Plus.
+> - Update the knowledge base with solutions for common migration errors.
+> - Follow up with customers who reported missing data after migration.
+
+---
+
+### Question 6
+
+**Do you need any technical information or resources from the development team to better assist customers?**
+
+#### Why This Question Is Important
+
+- **Facilitates knowledge sharing** between teams.
+- **Improves the quality of support** provided to customers.
+- **Empowers support staff** with the information they need.
+
+#### How to Answer
+
+- **Specify the information or resources needed**.
+- **Explain how it will help** in assisting customers.
+- **Be clear** to ensure you receive the right support.
+
+#### Example Answer
+
+> **Information Needed:**
+>
+> - Detailed documentation on how the Magento importer handles large datasets.
+>
+> **Purpose:**
+>
+> - To better explain to customers why timeouts occur and how we are addressing the issue.
+
+---
+
+### Question 7
+
+**Have customers provided feedback on our migration tool or processes that we should consider?**
+
+#### Why This Question Is Important
+
+- **Gathers user feedback** for continuous improvement.
+- **Identifies opportunities** to enhance our product.
+- **Shows customers we value their input**.
+
+#### How to Answer
+
+- **Share any feedback received**.
+- **Include both positive and negative comments**.
+- **Suggest how we might act** on this feedback.
+
+#### Example Answer
+
+> **Customer Feedback:**
+>
+> - Customers appreciate the intuitive interface but would like more detailed progress indicators during migrations.
+>
+> **Suggestions:**
+>
+> - Consider adding a percentage completion bar or estimated time remaining.
+
+---
+
+### Question 8
+
+**Is there any outdated or missing information in our customer support documentation that needs updating?**
+
+#### Why This Question Is Important
+
+- **Ensures customers have access to accurate information**.
+- **Reduces support requests** by providing self-help resources.
+- **Improves the overall customer experience**.
+
+#### How to Answer
+
+- **Identify any gaps** in the documentation.
+- **Explain the impact** on customers.
+- **Propose updates** needed.
+
+#### Example Answer
+
+> **Documentation Updates Needed:**
+>
+> - The FAQ section lacks information on handling API rate limit errors during migrations.
+>
+> **Impact:**
+>
+> - Customers are unsure how to proceed when they encounter these errors.
+>
+> **Proposed Update:**
+>
+> - Add a new FAQ entry explaining the issue and steps to mitigate it.
+
+---
+
+## General Tips
+
+- **Be Specific:** Provide detailed information to help the team understand your work and challenges.
+- **Be Honest:** If you're facing difficulties, share them so the team can support you.
+- **Be Proactive:** Offer suggestions and improvements when you see opportunities.
+- **Be Respectful of Time:** Keep your answers concise but informative.
+
+---
+
+By following this guidance, you'll contribute to a more effective and collaborative team environment. Your detailed updates help everyone stay informed and work together more efficiently.
+
+If you have any questions about how to answer these daily sync questions, please reach out to your manager for assistance.
