@@ -1,0 +1,349 @@
+---
+title: 'Daily Sync Guidance for Shopify Remix App Developers'
+description: 'Welcome to the Daily Sync Guidance! This document will help you understand how to effectively answer our daily sync questions. Clear and detailed answers will improve team collaboration, help us solve problems faster, and keep our projects on track.'
+---
+
+## Table of Contents
+
+- [Question 1](#question-1)
+- [Question 2](#question-2)
+- [Question 3](#question-3)
+- [Question 4](#question-4)
+- [Question 5](#question-5)
+- [Question 6](#question-6)
+- [Question 7](#question-7)
+- [Question 8](#question-8)
+- [Question 9](#question-9)
+- [Question 10](#question-10)
+- [General Tips](#general-tips)
+
+---
+
+## Question 1
+
+**Which specific features or components of the MigrationPro Shopify Store Migration App did you work on since your last update?**
+
+### Why This Question Is Important
+
+- **Keeps the team informed** about progress on different parts of the project.
+- **Helps coordinate efforts** and avoid overlapping work.
+- **Highlights your contributions** to the project.
+
+### How to Answer
+
+- **Be specific** about the components you worked on (e.g., Remix routes, data mapping).
+- **Describe your contributions** and any changes made.
+- **Mention any collaborations** with other team members.
+
+### Example Answer
+
+> **Worked On:**
+>
+> - Developed the **migration connection method** for WooCommerce.
+> - Implemented **entity selection** functionality for products and customers.
+> - Enhanced the **migration data mapping** for custom fields.
+>
+> **Details:**
+>
+> - Created new **Remix routes** for the connection and selection steps.
+> - Used **Shopify Polaris** components for a consistent UI.
+> - Optimized **Prisma models** for better performance with large datasets.
+
+---
+
+## Question 2
+
+**Did you encounter any challenges or issues while working on these components? How did you address them, or do you need assistance?**
+
+### Why This Question Is Important
+
+- **Identifies obstacles** that may affect project timelines.
+- **Encourages team support** to resolve issues quickly.
+- **Improves overall code quality** by addressing problems promptly.
+
+### How to Answer
+
+- **Describe any issues or bugs** you encountered.
+- **Explain how you addressed them** or if you need help.
+- **Be honest** about any challenges to get the support you need.
+
+### Example Answer
+
+> **Challenges Encountered:**
+>
+> - Faced an issue with **Remix loaders** not properly handling session data during migration steps.
+> - **Prisma** was returning null for certain queries due to schema mismatches.
+>
+> **Actions Taken:**
+>
+> - Adjusted the loader functions to correctly manage session state.
+> - Updated the Prisma schema and regenerated the client.
+>
+> **Assistance Needed:**
+>
+> - Would appreciate a review of the session management logic to ensure it's robust.
+
+---
+
+## Question 3
+
+**Have you implemented any optimizations for performance or user experience? Please describe them.**
+
+### Why This Question Is Important
+
+- **Enhances app performance**, leading to better user satisfaction.
+- **Shares useful techniques** with the team.
+- **Encourages proactive improvements** in the codebase.
+
+### How to Answer
+
+- **Specify the optimizations** you've made.
+- **Explain the impact** on performance or user experience.
+- **Mention any tools or strategies** used.
+
+### Example Answer
+
+> **Optimizations Implemented:**
+>
+> - Introduced **code splitting** to reduce initial load times.
+> - Implemented **lazy loading** for less critical components.
+> - Used **React.memo** to prevent unnecessary re-renders.
+>
+> **Impact:**
+>
+> - Improved page load speed by 25%.
+> - Enhanced responsiveness during the migration process.
+
+---
+
+## Question 4
+
+**Are there any updates or changes to the Shopify integration aspects that the team should be aware of?**
+
+### Why This Question Is Important
+
+- **Keeps the team updated** on integration changes that may affect their work.
+- **Ensures consistent implementation** across the project.
+- **Facilitates better collaboration** among team members.
+
+### How to Answer
+
+- **Mention any changes** made to Shopify integration.
+- **Explain the reason** for the changes.
+- **Inform the team** of any actions they need to take.
+
+### Example Answer
+
+> **Updates Made:**
+>
+> - Updated **Shopify App Bridge** to version 3.0 for improved navigation controls.
+> - Modified the **session storage adapter** to use Redis instead of Prisma for better scalability.
+>
+> **Reason:**
+>
+> - To enhance performance and reliability of session management.
+>
+> **Team Actions:**
+>
+> - Please update your local environment to include Redis configurations.
+
+---
+
+## Question 5
+
+**What are your main objectives for today, and how do they align with our current project goals and deadlines?**
+
+### Why This Question Is Important
+
+- **Sets clear priorities** for your work.
+- **Ensures alignment** with project milestones.
+- **Communicates your focus** to the team.
+
+### How to Answer
+
+- **List your key tasks** for the day.
+- **Explain how they contribute** to project goals.
+- **Mention any deadlines** or dependencies.
+
+### Example Answer
+
+> **Today's Objectives:**
+>
+> - Complete the **payment integration** for migration services.
+> - Begin work on the **migration report** feature.
+>
+> **Alignment with Project Goals:**
+>
+> - These tasks are crucial for the upcoming beta release next week.
+
+---
+
+## Question 6
+
+**Do you foresee any challenges or blockers in your tasks today? What support do you need to overcome them?**
+
+### Why This Question Is Important
+
+- **Anticipates potential delays**, allowing for proactive solutions.
+- **Encourages team collaboration** to address issues.
+- **Ensures project timelines** are maintained.
+
+### How to Answer
+
+- **Identify any expected challenges**.
+- **Explain how they might affect your work**.
+- **Request specific support** if needed.
+
+### Example Answer
+
+> **Challenges Foreseen:**
+>
+> - Integrating the new payment API might have compatibility issues with our current setup.
+>
+> **Support Needed:**
+>
+> - Need to coordinate with the backend team to ensure API endpoints are ready.
+> - Might require assistance in testing the payment flow.
+
+---
+
+## Question 7
+
+**Have you coordinated with the backend team regarding the API client or any changes in the Django REST API that affect your work?**
+
+### Why This Question Is Important
+
+- **Ensures seamless integration** between frontend and backend.
+- **Prevents misalignment** and potential bugs.
+- **Facilitates communication** across teams.
+
+### How to Answer
+
+- **Mention any discussions** with the backend team.
+- **Highlight any API changes** affecting your work.
+- **Note any pending actions** required.
+
+### Example Answer
+
+> **Coordination Efforts:**
+>
+> - Spoke with the backend team about new endpoints for migration status updates.
+>
+> **API Changes:**
+>
+> - They are updating the authentication method, which will affect our API client.
+>
+> **Pending Actions:**
+>
+> - Need to update our API client once the backend changes are deployed.
+
+---
+
+## Question 8
+
+**Are there any user interface or user experience improvements you've made or suggest making?**
+
+### Why This Question Is Important
+
+- **Improves the product** for end-users.
+- **Encourages innovation** in design and usability.
+- **Aligns the app with best practices** and user expectations.
+
+### How to Answer
+
+- **Describe any UI/UX improvements** you've made.
+- **Suggest potential enhancements**.
+- **Explain the benefits** to the user.
+
+### Example Answer
+
+> **Improvements Made:**
+>
+> - Updated the migration progress indicators for better clarity.
+> - Enhanced error messages to be more user-friendly.
+>
+> **Suggestions:**
+>
+> - Propose using **skeleton screens** during data loading to improve perceived performance.
+>
+> **Benefits:**
+>
+> - Enhances user satisfaction and reduces support tickets.
+
+---
+
+## Question 9
+
+**Do you have any pending pull requests or code reviews that require attention? Please share links if applicable.**
+
+### Why This Question Is Important
+
+- **Ensures timely integration** of code changes.
+- **Maintains code quality** through peer review.
+- **Keeps development moving forward** efficiently.
+
+### How to Answer
+
+- **List any pending pull requests**.
+- **Provide links or references**.
+- **Indicate who needs to review**.
+
+### Example Answer
+
+> **Pending Pull Requests:**
+>
+> - PR #101: Implementation of the new entity selection UI. [GitHub Link](https://github.com/MigrationPro/repo/pull/101)
+> - PR #102: Optimization of data mapping functions. [GitHub Link](https://github.com/MigrationPro/repo/pull/102)
+>
+> **Reviewers Needed:**
+>
+> - Would appreciate reviews from team members familiar with React hooks.
+
+---
+
+## Question 10
+
+**Do you have suggestions for improvements in our development workflow, tooling, or overall project practices?**
+
+### Why This Question Is Important
+
+- **Promotes continuous improvement** within the team.
+- **Encourages sharing of ideas** that can benefit the project.
+- **Identifies potential efficiencies** and innovations.
+
+### How to Answer
+
+- **Share any ideas or suggestions**.
+- **Explain the potential benefits**.
+- **Offer to help implement** if applicable.
+
+### Example Answer
+
+> **Suggestions:**
+>
+> - Propose integrating **ESLint** with a consistent configuration to maintain code quality and style.
+> - Recommend setting up **Prettier** for automatic code formatting to ensure consistency across the codebase.
+>
+> **Benefits:**
+>
+> - Improves code readability and maintainability.
+> - Reduces code review time spent on formatting issues.
+>
+> **Willingness to Act:**
+>
+> - Happy to help configure ESLint and Prettier and update the project documentation accordingly.
+
+---
+
+## General Tips
+
+- **Be Specific:** Provide detailed information to help the team understand your work and challenges.
+- **Be Honest:** Share any difficulties so the team can support you.
+- **Be Proactive:** Offer suggestions and improvements when you see opportunities.
+- **Be Respectful of Time:** Keep your answers concise but informative.
+
+---
+
+By following this guidance, you'll contribute to a more effective and collaborative team environment. Your detailed updates help everyone stay informed and work together more efficiently.
+
+If you have any questions about how to answer these daily sync questions, please reach out to your manager for assistance.
