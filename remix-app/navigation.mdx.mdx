@@ -1,0 +1,216 @@
+---
+title: "Managing Loading States with useLoadingState Hook in Remix"
+description: "This tutorial will show you how to effectively use the `useLoadingState` hook to manage loading states during navigation and form submissions in your Remix application."
+---
+
+## Understanding useLoadingState
+
+The `useLoadingState` hook provides a unified way to handle loading states and navigation in Shopify embedded apps. It returns:
+
+```javascript
+{
+  isLoading,      // true during navigation or form submission
+  isSubmitting,   // true during form submission
+  isNavigating,   // true during navigation
+  handleNavigation, // function to handle URL navigation
+  handleSubmit    // function to handle form submissions
+}
+```
+
+## Basic Usage Examples
+
+### 1. Simple Navigation with Loading State
+
+```javascript
+import { useLoadingState } from '../hooks/useLoadingState';
+
+function NavigationExample() {
+  const { isLoading, handleNavigation } = useLoadingState();
+
+  return (
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <button
+          onClick={() => handleNavigation('/dashboard')}
+        >
+          Go to Dashboard
+        </button>
+      )}
+    </div>
+  );
+}
+```
+
+### 2. Form Submission with Loading State
+
+```javascript
+import { useSubmit } from '@remix-run/react';
+import { useLoadingState } from '../hooks/useLoadingState';
+
+function FormExample() {
+  const submit = useSubmit();
+  const { isSubmitting, handleSubmit } = useLoadingState();
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    handleSubmit(submit, formData, {
+      method: 'post',
+      action: '/api/save-data'
+    });
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input type="text" name="title" />
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Saving...' : 'Save'}
+      </button>
+    </form>
+  );
+}
+```
+
+### 3. Complex Navigation with External Links
+
+```javascript
+import { useLoadingState } from '../hooks/useLoadingState';
+
+function NavigationMenu() {
+  const { isLoading, handleNavigation } = useLoadingState();
+
+  const menuItems = [
+    { label: 'Dashboard', url: '/dashboard' },
+    { label: 'Settings', url: '/settings' },
+    { label: 'Documentation', url: 'https://docs.example.com' }
+  ];
+
+  return (
+    <nav>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {menuItems.map((item) => (
+            <li key={item.url}>
+              <button
+                onClick={() => handleNavigation(item.url)}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
+}
+```
+
+### 4. Real-world Example: Setup Guide with Loading States
+
+Here's a simplified version of how the hook is used in the MigrationPro app:
+
+```javascript
+import { useSubmit } from '@remix-run/react';
+import { useLoadingState } from '../hooks/useLoadingState';
+
+function SetupGuideExample() {
+  const submit = useSubmit();
+  const { isLoading, handleNavigation, handleSubmit } = useLoadingState();
+
+  const steps = [
+    {
+      title: 'Connect Store',
+      action: () => handleSubmit(submit, null, { method: 'post' })
+    },
+    {
+      title: 'View Documentation',
+      action: () => handleNavigation('/docs/getting-started')
+    }
+  ];
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <div>
+      <h1>Setup Guide</h1>
+      {steps.map((step, index) => (
+        <button
+          key={index}
+          onClick={step.action}
+        >
+          {step.title}
+        </button>
+      ))}
+    </div>
+  );
+}
+```
+
+## Best Practices
+
+1. **Always handle loading states:**
+
+```javascript
+if (isLoading) {
+  return <LoadingSpinner /> // or null, depending on your needs
+}
+```
+
+1. **Use proper error handling:**
+
+```javascript
+const handleSafeNavigation = (url) => {
+  try {
+    handleNavigation(url);
+  } catch (error) {
+    console.error('Navigation failed:', error);
+    // Show error message to user
+  }
+};
+```
+
+1. **Combine with other Remix hooks:**
+
+```javascript
+function CombinedExample() {
+  const submit = useSubmit();
+  const { isSubmitting, handleSubmit } = useLoadingState();
+  const data = useLoaderData();
+
+  const onSave = () => {
+    handleSubmit(submit, { ...data }, {
+      method: 'post',
+      action: '/api/save'
+    });
+  };
+
+  return (
+    <button 
+      onClick={onSave} 
+      disabled={isSubmitting}
+    >
+      {isSubmitting ? 'Saving...' : 'Save'}
+    </button>
+  );
+}
+```
+
+## Key Benefits
+
+* Automatic loading state management
+
+* Consistent navigation handling
+
+* Safe URL validation
+
+* Integration with Shopify App Bridge loading indicator
+
+* Clean separation of concerns
+
+Remember that this hook is specifically designed for Shopify embedded apps and handles the App Bridge loading indicator automatically. If you're not building a Shopify app, you might want to modify the hook to remove the Shopify-specific functionality.
