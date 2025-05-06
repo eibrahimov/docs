@@ -8,73 +8,72 @@
     "dark": "#0D9373"
   },
   "favicon": "/favicon.svg",
-  "navigation": [
-    {
-      "section": "Getting started",
-      "pages": [
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "development"
+            ]
+          },
+          {
+            "group": "Essentials",
+            "pages": [
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images",
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/reusable-snippets"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
         {
-          "title": "understanding MigrationPro",
-          "slug": "understanding-migrationpro"
+          "anchor": "Documentation",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
         },
         {
-          "title": "setting up your account",
-          "slug": "setting-up-your-account"
-        }
-      ]
-    },
-    {
-      "section": "Migration workflow",
-      "pages": [
-        {
-          "title": "preparing your store for migration",
-          "slug": "preparing-your-store-for-migration"
+          "anchor": "Community",
+          "href": "https://mintlify.com/community",
+          "icon": "slack"
         },
         {
-          "title": "running a test migration",
-          "slug": "running-a-test-migration"
-        },
-        {
-          "title": "completing the full migration",
-          "slug": "completing-the-full-migration"
-        }
-      ]
-    },
-    {
-      "section": "Post-migration tasks",
-      "pages": [
-        {
-          "title": "verifying your migrated data",
-          "slug": "verifying-your-migrated-data"
-        },
-        {
-          "title": "optimizing your new Shopify store",
-          "slug": "optimizing-your-new-shopify-store"
-        }
-      ]
-    },
-    {
-      "section": "FAQ",
-      "pages": [
-        {
-          "title": "common migration questions",
-          "slug": "common-migration-questions"
-        }
-      ]
-    },
-    {
-      "section": "troubleshooting",
-      "pages": [
-        {
-          "title": "diagnosing migration issues",
-          "slug": "diagnosing-migration-issues"
-        },
-        {
-          "title": "fixing data discrepancies",
-          "slug": "fixing-data-discrepancies"
+          "anchor": "Blog",
+          "href": "https://mintlify.com/blog",
+          "icon": "newspaper"
         }
       ]
     }
-  ],
+  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"

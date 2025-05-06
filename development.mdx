@@ -1,97 +1,65 @@
 ---
-title: 'Development'
-description: 'Learn how to preview changes locally'
+title: Install MigrationPro
 ---
 
-<Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
-</Info>
+# Install MigrationPro to start your migration journey with Shopify
 
-Step 1. Install Mintlify on your OS:
+Moving your store to Shopify can feel challenging, but with MigrationPro, transferring your shop data becomes easy. This guide will walk you through installing the MigrationPro app for a successful start to your transition.
 
-<CodeGroup>
+## Learning objectives
 
-```bash npm
-npm i -g mintlify
-```
+- Understand installation prerequisites.
+- Successfully install the MigrationPro app.
+- Connect your source platforms.
 
-```bash yarn
-yarn global add mintlify
-```
+## Steps to install MigrationPro
 
-</CodeGroup>
+### 1. Check Shopify store compatibility
 
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
+Before installing, make sure your Shopify store is compatible with MigrationPro. You need to have a Shopify plan that supports third-party app installations.
 
-```bash
-mintlify dev
-```
+:::tip
+If you're on the Shopify Basic plan or higher, you're ready!
+:::
 
-The documentation website is now available at `http://localhost:3000`.
+### 2. Install from Shopify App Store
 
-### Custom Ports
+1. Go to the [Shopify App Store](https://apps.shopify.com).
+2. In the search bar, type `MigrationPro` and press `Enter`.
+3. Find the MigrationPro app in the results and click on it.
+4. Click the `Add app` button.
+5. Follow the prompts to log into your Shopify admin and authorize the app installation.
 
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
+### 3. Grant necessary permissions
 
-```bash
-mintlify dev --port 3333
-```
+After installation, the app will request specific permissions to function correctly. Make sure to:
 
-You will see an error like this if you try to run Mintlify in a port that's already taken:
+1. Review the permissions requested by the app.
+2. Click `Install app` to grant permissions.
 
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
+:::caution
+Grant permissions only to trusted apps to protect your store's data.
+:::
 
-## Mintlify Versions
+### 4. Connect source platform
 
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
+An essential step in the migration process is linking your current store to MigrationPro:
 
-<CodeGroup>
+1. Navigate to the MigrationPro app dashboard.
+2. Click `Connect Source Platform`.
+3. Select your current store's platform (e.g., Magento, WooCommerce).
+4. Enter your store URL and any additional required credentials.
+5. Follow the on-screen instructions to finalize the connection.
 
-```bash npm
-npm i -g mintlify@latest
-```
+### 5. Verify installation success
 
-```bash yarn
-yarn global upgrade mintlify
-```
+Finally, ensure that the setup is successful by checking:
 
-</CodeGroup>
+- Your Shopify admin for a new app section titled `MigrationPro`.
+- Your MigrationPro app dashboard for confirmation of a successful connection.
 
-## Deployment
+:::tip
+If everything looks good, you’re ready to start configuring your migration!
+:::
 
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
-
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
+Congratulations! You've successfully installed MigrationPro and are ready to make your transition to Shopify seamless and efficient. If you have any issues, MigrationPro’s support team is available to help ensure your migration experience is as smooth as possible.
