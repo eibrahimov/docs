@@ -13,12 +13,12 @@
       "section": "Getting started",
       "pages": [
         {
-          "title": "understanding MigrationPro",
-          "slug": "understanding-migrationpro"
+          "title": "install MigrationPro",
+          "slug": "install-migrationpro"
         },
         {
-          "title": "setting up your account",
-          "slug": "setting-up-your-account"
+          "title": "prepare data for migration",
+          "slug": "prepare-data-for-migration"
         }
       ]
     },
@@ -26,16 +26,16 @@
       "section": "Migration workflow",
       "pages": [
         {
-          "title": "preparing your store for migration",
-          "slug": "preparing-your-store-for-migration"
+          "title": "migrate product data",
+          "slug": "migrate-product-data"
         },
         {
-          "title": "running a test migration",
-          "slug": "running-a-test-migration"
+          "title": "migrate customer data",
+          "slug": "migrate-customer-data"
         },
         {
-          "title": "completing the full migration",
-          "slug": "completing-the-full-migration"
+          "title": "migrate order history",
+          "slug": "migrate-order-history"
         }
       ]
     },
@@ -43,12 +43,12 @@
       "section": "Post-migration tasks",
       "pages": [
         {
-          "title": "verifying your migrated data",
-          "slug": "verifying-your-migrated-data"
+          "title": "validate and optimize store",
+          "slug": "validate-and-optimize-store"
         },
         {
-          "title": "optimizing your new Shopify store",
-          "slug": "optimizing-your-new-shopify-store"
+          "title": "configure taxes and shipping",
+          "slug": "configure-taxes-and-shipping"
         }
       ]
     },
@@ -62,15 +62,11 @@
       ]
     },
     {
-      "section": "troubleshooting",
+      "section": "Troubleshooting",
       "pages": [
         {
-          "title": "diagnosing migration issues",
-          "slug": "diagnosing-migration-issues"
-        },
-        {
-          "title": "fixing data discrepancies",
-          "slug": "fixing-data-discrepancies"
+          "title": "fixing migration errors",
+          "slug": "fixing-migration-errors"
         }
       ]
     }
