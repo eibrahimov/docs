@@ -1,69 +1,59 @@
 ```markdown
----
-title: Install MigrationPro
----
+# Install MigrationPro
 
-# Install MigrationPro to start your migration journey with Shopify
+Learn how to install the MigrationPro app in your Shopify store.
 
-Moving your store to Shopify can feel challenging, but with MigrationPro, transferring your shop data becomes easy. This guide will walk you through installing the MigrationPro app for a successful start to your transition.
+## Introduction
 
-## Learning objectives
+Do you want to move your shop data smoothly and securely? Installing the MigrationPro app can help you migrate your data with ease. This guide walks you through the installation process, explains prerequisites, and helps you configure basic settings.
 
-- Understand installation prerequisites.
-- Successfully install the MigrationPro app.
-- Connect your source platforms.
+## Learning Objectives
+- Understand the installation process.
+- Familiarize yourself with prerequisites.
+- Configure basic settings.
 
-## Steps to install MigrationPro
+## Getting Started
 
-### 1. Check Shopify store compatibility
+### Step-by-step Instructions
 
-Before installing, make sure your Shopify store is compatible with MigrationPro. You need to have a Shopify plan that supports third-party app installations.
+1. **Open Your Shopify Admin Dashboard**
+   - Log into your Shopify account to access your admin dashboard.
 
-:::tip
-If you're on the Shopify Basic plan or higher, you're ready!
-:::
+2. **Navigate to the Shopify App Store**
+   - In the admin menu, find and click on `Apps`.
+   - Select `Visit Shopify App Store` to open the App Store in a new tab.
 
-### 2. Install from Shopify App Store
+3. **Search for MigrationPro**
+   - Type "MigrationPro" in the search bar at the top.
+   - Press `Enter` to see the search results.
 
-1. Go to the [Shopify App Store](https://apps.shopify.com).
-2. In the search bar, type `MigrationPro` and press `Enter`.
-3. Find the MigrationPro app in the results and click on it.
-4. Click the `Add app` button.
-5. Follow the prompts to log into your Shopify admin and authorize the app installation.
+4. **Add the App**
+   - Locate the MigrationPro app from the list and click on it.
+   - Click on the `Add app` button.
 
-### 3. Grant necessary permissions
+   :::tip
+   Make sure you're logged into the correct Shopify store before adding the app.
+   :::
 
-After installation, the app will request specific permissions to function correctly. Make sure to:
+5. **Install the App**
+   - A pop-up will guide you through the installation steps.
+   - Follow the prompts to proceed with the app installation.
 
-1. Review the permissions requested by the app.
-2. Click `Install app` to grant permissions.
+6. **Accept Permissions**
+   - Review the permissions that MigrationPro requires.
+   - Click `Install app` to accept these permissions and integrate the app with your store.
 
-:::caution
-Grant permissions only to trusted apps to protect your store's data.
-:::
+   :::caution
+   Carefully review the app permissions to understand what data MigrationPro will access.
+   :::
 
-### 4. Connect source platform
+7. **Complete the Basic Setup Wizard**
+   - After installation, access MigrationPro from your Shopify admin.
+   - Follow the basic setup wizard to configure your migration settings.
 
-An essential step in the migration process is linking your current store to MigrationPro:
+   :::tip
+   Explore the MigrationPro dashboard for additional features.
+   :::
 
-1. Navigate to the MigrationPro app dashboard.
-2. Click `Connect Source Platform`.
-3. Select your current store's platform (e.g., Magento, WooCommerce).
-4. Enter your store URL and any additional required credentials.
-5. Follow the on-screen instructions to finalize the connection.
-
-### 5. Verify installation success
-
-Finally, ensure that the setup is successful by checking:
-
-- Your Shopify admin for a new app section titled `MigrationPro`.
-- Your MigrationPro app dashboard for confirmation of a successful connection.
-
-:::tip
-If everything looks good, you’re ready to start configuring your migration!
-:::
-
-Congratulations! You've successfully installed MigrationPro and are ready to make your transition to Shopify seamless and efficient. If you have any issues, MigrationPro’s support team is available to help ensure your migration experience is as smooth as possible.
+You're now ready to harness the full potential of MigrationPro for your eCommerce needs. If you encounter any issues, the MigrationPro support team is ready to assist you.
 ```
-
-I have ensured all aspects of the content meet Shopify's style and care guidelines. The language is clear and concise, and I replaced the passive voice with active voice where necessary. All steps are accurate and easy to follow for less technical users.
