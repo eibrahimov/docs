@@ -1,42 +1,42 @@
 ```markdown
 # Common migration questions
 
-Migrating your store to Shopify can feel overwhelming, but it doesn't have to be. With the right information and tools, you can make the transition smooth. In this article, we'll address some frequently asked questions about the MigrationPro process, provide solutions to typical migration challenges, and guide you to additional resources.
+Switching to Shopify can raise many questions about the migration process. Understanding how to transition smoothly can reduce anxiety and ensure your store is up and running quickly. This article addresses frequently asked questions, helping you find quick resolutions to common issues.
 
-## 1. Frequently asked questions
+## Frequently asked questions
 
-Before diving into detailed queries, check out our FAQ section. It's a great starting point for an overview of common concerns.
+1. **What's included in regular migration?**
 
-- **Is re-migration free?**  
-  Yes, re-migration is free unless you exceed your entity limit. You can estimate your entity limit from [this article](https://help.migrationpro.io/en/articles/5796882-how-to-calculate-the-entity-limit).
+   Regular migration includes a full transfer of your store's data to Shopify. You can choose extra options to customize what's migrated. Make sure to review these options beforehand to avoid missing essential data.
 
-- **What is included in regular migration?**  
-  You can choose additional options to configure your migration. More details are available in the MigrationPro documentation.
+   ```tip
+   Always double-check the additional migration options before starting to ensure everything you need is included.
+   ```
 
-## 2. Data compatibility questions
+2. **Is re-migration free?**
 
-A primary concern when migrating is ensuring your data is compatible with Shopify. Here are some common questions about data compatibility:
+   Yes, re-migration is free as long as you don't exceed the entity limit. To calculate your entity limit, refer to [this article](https://help.migrationpro.io/en/articles/5796882-how-to-calculate-the-entity-limit). It's important to monitor your entity usage to avoid unexpected fees.
 
-- **Will all my data transfer?**  
-  MigrationPro is designed to transfer your data accurately. However, it's important to verify everything post-migration to ensure accuracy.
+   ```caution
+   Ensure your migration stays within the entity limit to avoid extra charges.
+   ```
 
-- **How do I perform a recent data migration?**  
-  If you need to migrate data added after your initial transfer, perform a recent data migration:
+3. **How do I perform a recent data migration?**
 
-  1. Click **My Migrations** in the MigrationPro app.
-  2. Select **Recent Data Migration**.
+   After your initial migration, you can easily migrate recent changes:
 
-## 3. Additional learning resources
+   1. Open the MigrationPro app and click on **My migrations**.
+   2. Select **Recent data migration** to begin updating your Shopify store with the latest changes.
 
-Need more help? Here are some resources to deepen your understanding of the migration process:
+   ```tip
+   Perform recent data migrations regularly to keep your store data up to date with the latest sales, products, and customer information.
+   ```
 
-- **MigrationPro documentation**: This comprehensive resource covers all aspects of migration.
-- **Shopify Help Center**: Find articles and guides specifically for new and migrating Shopify merchants.
-- **Community forums**: Join discussions and get advice from other merchants who've migrated.
+## Need help?
 
-:::tip
-Always back up your data before starting a full migration. This ensures you can restore your data if something doesn't go as planned.
-:::
+If you encounter any problems during your migration, our support team is ready to assist you. Feel free to get in touch:
 
-By familiarizing yourself with these common questions and solutions, you're better equipped to handle the migration process smoothly. Remember, there's plenty of support available, so don't hesitate to reach out if you need help!
+- Email: [support@migrationpro.io](mailto:support@migrationpro.io)
+
+Keep your migration process smooth by addressing these common concerns, ensuring your Shopify experience starts off on the right foot. Regularly check back for updates to this guide as we continue to improve your migration journey.
 ```

@@ -13,26 +13,70 @@
       "section": "getting started",
       "pages": [
         {
-          "title": "install MigrationPro",
+          "title": "install migrationpro",
           "slug": "install-migrationpro"
+        },
+        {
+          "title": "introduction to migration dashboard",
+          "slug": "introduction-to-migration-dashboard"
         }
       ]
     },
     {
       "section": "migration workflow",
-      "pages": []
+      "pages": [
+        {
+          "title": "setup migration profile",
+          "slug": "setup-migration-profile"
+        },
+        {
+          "title": "execute product data migration",
+          "slug": "execute-product-data-migration"
+        },
+        {
+          "title": "customer and order data migration",
+          "slug": "customer-and-order-data-migration"
+        }
+      ]
     },
     {
       "section": "post-migration tasks",
-      "pages": []
+      "pages": [
+        {
+          "title": "verify migrated data integrity",
+          "slug": "verify-migrated-data-integrity"
+        },
+        {
+          "title": "optimize store configuration",
+          "slug": "optimize-store-configuration"
+        },
+        {
+          "title": "customer communication strategy",
+          "slug": "customer-communication-strategy"
+        }
+      ]
     },
     {
       "section": "faq",
-      "pages": []
+      "pages": [
+        {
+          "title": "common migration questions",
+          "slug": "common-migration-questions"
+        }
+      ]
     },
     {
       "section": "troubleshooting",
-      "pages": []
+      "pages": [
+        {
+          "title": "resolving data errors",
+          "slug": "resolving-data-errors"
+        },
+        {
+          "title": "dealing with platform connectivity issues",
+          "slug": "dealing-with-platform-connectivity-issues"
+        }
+      ]
     }
   ],
   "logo": {
