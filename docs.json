@@ -10,63 +10,54 @@
   "favicon": "/favicon.svg",
   "navigation": [
     {
-      "section": "Getting started",
+      "section": "Welcome to MigrationPro",
       "pages": [
         {
-          "title": "install MigrationPro",
-          "slug": "install-migrationpro"
+          "title": "introduction to migrationpro",
+          "slug": "introduction-to-migrationpro"
         },
         {
-          "title": "prepare data for migration",
-          "slug": "prepare-data-for-migration"
+          "title": "installation and setup",
+          "slug": "installation-and-setup"
         }
       ]
     },
     {
-      "section": "Migration workflow",
+      "section": "Migration Workflow",
       "pages": [
         {
-          "title": "migrate product data",
-          "slug": "migrate-product-data"
+          "title": "preparing your data",
+          "slug": "preparing-your-data"
         },
         {
-          "title": "migrate customer data",
-          "slug": "migrate-customer-data"
-        },
-        {
-          "title": "migrate order history",
-          "slug": "migrate-order-history"
+          "title": "running your first migration",
+          "slug": "running-your-first-migration"
         }
       ]
     },
     {
-      "section": "Post-migration tasks",
+      "section": "Post-Migration Tasks",
       "pages": [
         {
-          "title": "validate and optimize store",
-          "slug": "validate-and-optimize-store"
+          "title": "post-migration review",
+          "slug": "post-migration-review"
         },
         {
-          "title": "configure taxes and shipping",
-          "slug": "configure-taxes-and-shipping"
+          "title": "optimizing your shopify store",
+          "slug": "optimizing-your-shopify-store"
         }
       ]
     },
     {
-      "section": "FAQ",
+      "section": "FAQ and Troubleshooting",
       "pages": [
         {
           "title": "common migration questions",
           "slug": "common-migration-questions"
-        }
-      ]
-    },
-    {
-      "section": "Troubleshooting",
-      "pages": [
+        },
         {
-          "title": "fixing migration errors",
-          "slug": "fixing-migration-errors"
+          "title": "troubleshooting migration issues",
+          "slug": "troubleshooting-migration-issues"
         }
       ]
     }
