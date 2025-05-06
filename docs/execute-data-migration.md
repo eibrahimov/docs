@@ -1,65 +1,66 @@
 ```markdown
----
-title: Execute data migration from your old store to Shopify
----
+# Execute data migration
 
-# Introduction
-
-Migrating your store to Shopify can seem like a big step, but it's important to make sure all your critical data moves over smoothly. In this guide, we'll show you how to use the MigrationPro app to transfer your data, ensure its integrity, and troubleshoot any issues that come up.
+Migrating your store data is a key step when moving your store to another platform. With the MigrationPro app, you can ensure a smooth transition of your store's data. Follow these steps to start the migration, track its progress, and manage any issues.
 
 ## Learning objectives
 
-- Transfer critical store data.
-- Verify data integrity post-migration.
-- Troubleshoot common migration issues.
+- Start a data migration
+- Track migration progress
+- Handle data migration issues
 
 ## Steps to execute data migration
 
-1. **Initiate the migration process**
+1. **Go to the MigrationPro app dashboard**
+   - Open your Shopify admin and find the `Apps` section.
+   - Click on `MigrationPro` to open the app.
 
-   - Open the MigrationPro app in Shopify.
-   - In the app, click on "My Migrations" and then select your migration project.
-   - Click "Start Full Migration."
-
-   :::tip
-   Ensure you’ve backed up your data before initiating the migration.
-   :::
-
-2. **Map your existing data fields to Shopify fields**
-   
-   - Inside the MigrationPro app, follow the prompts to map each of your current data fields to the corresponding Shopify fields.
-   - Double-check the field mapping to ensure accuracy.
-
-   :::caution
-   Improper mapping can lead to data discrepancies. Make sure each field is correctly linked.
-   :::
-
-3. **Monitor the migration progress**
-
-   - Once you start the migration, keep an eye on the progress bar in the MigrationPro app.
-   - Wait until the migration process is completed before proceeding with any store activities.
-
-4. **Verify the success of the migrated data**
-
-   - After the migration is complete, inspect a sample of your migrated data in Shopify.
-   - Check product listings, customer records, and any other key data to ensure everything is there and accurate.
+2. **Start a new migration task**
+   - In the MigrationPro dashboard, click `New Migration`.
+   - Select the data you want to migrate (e.g., products, customers, orders).
+   - Click `Start Migration` to begin.
 
    :::tip
-   Compare the sample data to your old store to spot-check for any inconsistencies.
+   Keep an inventory of all the data and assets you plan to transfer. This ensures you don't overlook anything during the migration.
    :::
 
-5. **Resolve any issues or discrepancies**
+3. **Monitor migration progress on the dashboard**
+   - Watch the migration status in real-time on the MigrationPro dashboard.
+   - Percentages and progress bars will show how much data has been migrated.
 
-   - If you detect any issues, return to the MigrationPro app and use the troubleshooting tips provided.
-   - Contact support at [support@migration.io](mailto:support@migration.io) if you encounter complex issues.
+4. **Check logs for errors**
+   - Go to the `Logs` section in the dashboard.
+   - Look for any errors or warnings listed.
+
+5. **Resolve any migration conflicts**
+   - For each conflict or error in the logs, click `Resolve` to view detailed information.
+   - Follow the instructions to fix these issues or consult support if needed.
+
+   :::tip
+   Back up your original and migrated data files before making any changes. This will help you restore any data if needed.
+   :::
 
    :::caution
-   Running a remigration can create duplicate entities. To avoid this, use the "Clear current data on Target Store" option before remigrating.
+   Double-check tax rates and applied settings. Use the `Calculate product price with tax` option during migration to ensure prices in your store include tax correctly.
    :::
 
-## Conclusion
+## Important considerations
 
-Migrating your data to Shopify doesn't have to be daunting. By carefully following these steps and using MigrationPro, you can efficiently transfer all essential data to your new Shopify store. Remember to verify your migrated information and address any discrepancies right away to ensure a seamless transition.
+- **Back up your current store**
+  - Before starting, ensure all your store data is backed up using your platform's backup features or third-party tools.
+
+- **Allocate resources like team members or budget**
+  - Assign team members to handle migration and set aside the necessary budget for tools or services.
+  - Underestimating resource needs might cause delays and extra costs, so plan ahead properly.
+
+- **Set expectations with your team or stakeholders**
+  - Inform them about the migration timeline and expected outcomes.
+  - Give regular updates to maintain transparency.
+
+## Access help and support
+
+- If you face challenges during migration, check the **Help** section in the MigrationPro app.
+- Use FAQs, contact forms, or live chat options for support.
+
+By following these steps, you can execute a successful data migration with MigrationPro, ensuring a seamless transition of your store's data.
 ```
-
-This markdown now meets the clarity requirements for non-technical merchants, adheres to Shopify Polaris style in terms of tone and formatting, and avoids jargon and passive voice. Steps are laid out clearly and sequentially, making it easy for merchants to follow.
