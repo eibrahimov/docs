@@ -10,54 +10,50 @@
   "favicon": "/favicon.svg",
   "navigation": [
     {
-      "section": "getting started",
+      "section": "Getting started",
       "pages": [
         {
-          "title": "install migrationpro",
-          "slug": "install-migrationpro"
+          "title": "understanding MigrationPro",
+          "slug": "understanding-migrationpro"
         },
         {
-          "title": "introduction to migration dashboard",
-          "slug": "introduction-to-migration-dashboard"
+          "title": "setting up your account",
+          "slug": "setting-up-your-account"
         }
       ]
     },
     {
-      "section": "migration workflow",
+      "section": "Migration workflow",
       "pages": [
         {
-          "title": "setup migration profile",
-          "slug": "setup-migration-profile"
+          "title": "preparing your store for migration",
+          "slug": "preparing-your-store-for-migration"
         },
         {
-          "title": "execute product data migration",
-          "slug": "execute-product-data-migration"
+          "title": "running a test migration",
+          "slug": "running-a-test-migration"
         },
         {
-          "title": "customer and order data migration",
-          "slug": "customer-and-order-data-migration"
+          "title": "completing the full migration",
+          "slug": "completing-the-full-migration"
         }
       ]
     },
     {
-      "section": "post-migration tasks",
+      "section": "Post-migration tasks",
       "pages": [
         {
-          "title": "verify migrated data integrity",
-          "slug": "verify-migrated-data-integrity"
+          "title": "verifying your migrated data",
+          "slug": "verifying-your-migrated-data"
         },
         {
-          "title": "optimize store configuration",
-          "slug": "optimize-store-configuration"
-        },
-        {
-          "title": "customer communication strategy",
-          "slug": "customer-communication-strategy"
+          "title": "optimizing your new Shopify store",
+          "slug": "optimizing-your-new-shopify-store"
         }
       ]
     },
     {
-      "section": "faq",
+      "section": "FAQ",
       "pages": [
         {
           "title": "common migration questions",
@@ -69,12 +65,12 @@
       "section": "troubleshooting",
       "pages": [
         {
-          "title": "resolving data errors",
-          "slug": "resolving-data-errors"
+          "title": "diagnosing migration issues",
+          "slug": "diagnosing-migration-issues"
         },
         {
-          "title": "dealing with platform connectivity issues",
-          "slug": "dealing-with-platform-connectivity-issues"
+          "title": "fixing data discrepancies",
+          "slug": "fixing-data-discrepancies"
         }
       ]
     }
