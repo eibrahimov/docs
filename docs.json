@@ -8,72 +8,77 @@
     "dark": "#0D9373"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
+  "navigation": [
+    {
+      "section": "getting started",
+      "pages": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "title": "install migrationpro",
+          "slug": "install-migrationpro"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "title": "introduction to migration dashboard",
+          "slug": "introduction-to-migration-dashboard"
+        }
+      ]
+    },
+    {
+      "section": "migration workflow",
+      "pages": [
+        {
+          "title": "setup migration profile",
+          "slug": "setup-migration-profile"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "title": "execute product data migration",
+          "slug": "execute-product-data-migration"
+        },
+        {
+          "title": "customer and order data migration",
+          "slug": "customer-and-order-data-migration"
+        }
+      ]
+    },
+    {
+      "section": "post-migration tasks",
+      "pages": [
+        {
+          "title": "verify migrated data integrity",
+          "slug": "verify-migrated-data-integrity"
+        },
+        {
+          "title": "optimize store configuration",
+          "slug": "optimize-store-configuration"
+        },
+        {
+          "title": "customer communication strategy",
+          "slug": "customer-communication-strategy"
+        }
+      ]
+    },
+    {
+      "section": "faq",
+      "pages": [
+        {
+          "title": "common migration questions",
+          "slug": "common-migration-questions"
+        }
+      ]
+    },
+    {
+      "section": "troubleshooting",
+      "pages": [
+        {
+          "title": "resolving data errors",
+          "slug": "resolving-data-errors"
+        },
+        {
+          "title": "dealing with platform connectivity issues",
+          "slug": "dealing-with-platform-connectivity-issues"
         }
       ]
     }
-  },
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
