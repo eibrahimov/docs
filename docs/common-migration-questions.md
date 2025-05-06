@@ -1,59 +1,109 @@
 ```markdown
 # Common migration questions
 
-Migrating your store to Shopify is an exciting step towards growth and new opportunities. We’ve gathered some of the most common questions merchants have during this process. Whether you’re concerned about timelines or need extra support, this guide aims to address those queries and help make your migration as smooth as possible.
+Find answers to frequently asked questions about data migration using MigrationPro.
+
+As a Shopify merchant, moving your store data can feel overwhelming. This guide aims to simplify the migration process into Shopify using MigrationPro. It will help you understand common challenges, provide solutions, and introduce the features of MigrationPro.
 
 ## Learning objectives
-- Address common migration concerns 
-- Understand the migration timeline 
-- Learn about support resources
+- Understand common challenges in migration
+- Find quick solutions to FAQs
+- Learn about MigrationPro features
 
-## 1. Typical questions during migration
+## Key steps
 
-### What is the migration timeline like?
-Migrating to Shopify usually follows a predictable timeline. Here’s a general idea:
+### 1. Review top queried topics in FAQ section
 
-1. **Preparation:** Organize data and content in your current store.
-2. **Configuration:** Set up your Shopify store settings, such as currency and payment methods.
-3. **Data import:** Use compatible tools to import data, such as products and customers.
-4. **Testing:** Check functionality, design, and operational capabilities.
-5. **Launch:** Make your store live after thorough testing.
+Start by exploring common migration questions. This step helps you anticipate potential challenges and streamline your migration process.
 
-   :::tip
-   Start with a smaller dataset or perform a demo migration to familiarize yourself with the process before full migration.
-   :::
+**Steps:**
+1. Go to the MigrationPro dashboard.
+2. Click on `FAQs` to see a list of frequently asked questions.
+3. Note any topics that apply to your specific migration needs.
 
-### Is re-migration free?
-Yes, the re-migration process is free as long as you stay within your entity limit. You can calculate your limit in this [help article](https://help.migrationpro.io/en/articles/5796882-how-to-calculate-the-entity-limit).
+:::tip
+Keep an inventory of all the data and assets you plan to transfer. This ensures you don’t overlook anything during the migration.
+:::
 
-### How do I start a re-migration?
-To start a re-migration, follow these steps:
+### 2. Access support for complex issues
 
-1. Go to the MigrationPro Dashboard and click the "Remigrate" button.
-2. In the pop-up, select "Edit Migration."
-3. Choose the entities you want to re-migrate, then proceed.
+If you encounter complex migration challenges, it's crucial to access support resources.
 
-## 2. Estimating migration costs
+**Steps:**
+1. Visit the `Help` section in the MigrationPro dashboard.
+2. Use available resources like the FAQ, contact forms, or live chat for assistance.
+3. Reach out to the MigrationPro support team for hands-on help if needed.
 
-To estimate the cost of your migration:
+:::tip
+Don’t hesitate to ask for help if you're stuck. The MigrationPro support team is there to assist you.
+:::
 
-1. Visit the [migration pricing page](https://migrationpro.io/migration-pricing/).
-2. Enter the number of orders, customers, and products in their respective fields.
+### 3. Compare Shopify capabilities pre- and post-migration
 
-   :::caution
-   Always double-check the values entered to avoid incorrect estimates.
-   :::
+Ensure your store's capabilities align before and after migration for a smooth transition.
 
-## 3. Accessing support resources
+**Steps:**
+1. Use Shopify reporting tools:
+   - Go to your Shopify admin and click `Analytics`.
+   - Use the `Reports` section to check data summaries and statistical accuracy.
+2. Amend data errors:
+   - If you find discrepancies, go to `Products`, `Customers`, or `Orders`.
+   - Use the `Edit` feature to make necessary corrections.
 
-If you need further assistance during your migration:
+:::caution
+Double-check tax rates and applied settings. Use the `Calculate product price with tax` option during migration to ensure prices in your store include tax correctly.
+:::
 
-1. Use the Help Center for detailed guides.
-2. Reach out to Shopify Support via chat or email for personalized recommendations.
-3. Consider hiring a Shopify Expert if you have complex needs or custom tasks.
+## Additional setup
 
-## Keep your FAQ updated
-Migration queries can evolve, so it’s important to update your questions based on new merchant experiences. Regularly revisit and revise your FAQ to ensure it remains relevant.
+### Payment providers
 
-By understanding these common questions and steps, your journey from your current platform to Shopify can be seamless. Remember, support is just a click away whenever you need it!
+Set up payment methods correctly.
+
+**Steps:**
+1. In the `Settings` menu, choose `Payments`.
+2. In the `Payment providers` section, click `Manage`.
+3. Choose your preferred payment providers and enter the necessary details.
+4. Click `Activate` to enable the payment method.
+
+:::tip
+Offering multiple payment options can boost customer satisfaction and conversion rates.
+:::
+
+### Shipping settings
+
+Configure how you want to manage shipping in your store.
+
+**Steps:**
+1. Go back to the `Settings` menu and click `Shipping and delivery`.
+2. Under "Shipping," click `Manage shipping rates`.
+3. Add or edit shipping zones by clicking `Add rate` or on the existing rates.
+4. Click `Save` to save your changes.
+
+## Testing
+
+### Test store functionality with sample transactions
+
+Verify that your store functions correctly post-migration.
+
+**Steps:**
+1. Go to your Shopify admin dashboard.
+2. Click `Orders` from the left-side menu.
+3. Click `Create order` to manually enter a sample order.
+4. Complete the checkout process to ensure everything works correctly.
+
+:::tip
+Back up your original and migrated data files before making any changes. This will help you restore any data if needed.
+:::
+
+## Conclusion
+
+By following these steps, you'll be well-equipped to use the MigrationPro dashboard effectively. Enjoy a seamless migration experience with your customized dashboard settings!
+
+## Additional resources
+
+- Keep a regular inventory check to ensure data integrity.
+- Set clear expectations with your team and stakeholders to maintain transparency.
+
+This comprehensive guide sets you on the path to mastering store migration with MigrationPro.
 ```
